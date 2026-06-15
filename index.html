@@ -684,10 +684,10 @@
 
         .map-box {
             position: relative;
-            border-radius: var(--radius-lg);
+            border-radius: 16px;
             overflow: hidden;
             box-shadow: var(--shadow-md);
-            height: 450px;
+            height: 400px;
         }
 
         .map-btn {
@@ -729,6 +729,33 @@
         .address-link:hover {
             color: var(--primary);
             transform: translateY(-1px);
+        }
+
+        .btn-maps {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px 32px;
+            border-radius: 9999px;
+            background-color: var(--primary);
+            color: var(--white);
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(201, 152, 122, 0.3);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            cursor: pointer;
+            margin-bottom: 30px;
+        }
+
+        .btn-maps:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(201, 152, 122, 0.5);
+            background-color: var(--dark);
+            color: var(--white);
         }
 
         /* BOTTOM EMBED PRE-CTA BADGE */
@@ -1334,7 +1361,7 @@
         </div>
     </section>
 
-    <section class="map-section section-large">
+    <section class="map-section section-large" style="text-align: center;">
         <div class="container">
             <h2 class="section-title">Nossa Localização</h2>
             <a href="https://www.google.com/maps/search/?api=1&query=MANU+-+STUDIO+BEAUTY,+Rua+Bauru+-+Novo+horizonte,+Cama%C3%A7ari+-+BA,+42802-005"
@@ -1344,6 +1371,15 @@
                aria-label="Abrir endereço no Google Maps">
                 Rua Bauru - Novo Horizonte, Camaçari - BA
             </a>
+            <div>
+                <a href="https://www.google.com/maps/search/?api=1&query=MANU+-+STUDIO+BEAUTY,+Rua+Bauru+-+Novo+horizonte,+Cama%C3%A7ari+-+BA,+42802-005"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn-maps"
+                   aria-label="Como chegar ao estúdio no Google Maps">
+                   COMO CHEGAR 📍
+                </a>
+            </div>
             <div class="map-box reveal">
                 <a href="https://www.google.com/maps/search/?api=1&query=MANU+-+STUDIO+BEAUTY,+Rua+Bauru+-+Novo+horizonte,+Cama%C3%A7ari+-+BA,+42802-005"
                    target="_blank"
@@ -1354,10 +1390,10 @@
                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
                 </a>
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.3123719003513!2d-38.3312!3d-12.7011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zTUFOSSBTdHVkaW8gQmVhdXR5LCBSdWEgQmF1cnUsIE5vdm8gSG9yaXpvbnRlLCBDYW1hY2FyaSBCQQ!5e0!3m2!1spt-BR!2sbr!4v1654983210111!5m2!1spt-BR!2sbr"
+                    src="https://maps.google.com/maps?q=MANU%20-%20STUDIO%20BEAUTY,%20Rua%20Bauru,%20Novo%20Horizonte,%20Cama%C3%A7ari%20-%20BA,%2042802-005&t=&z=16&ie=UTF8&iwloc=&output=embed"
                     width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade" sandbox="allow-scripts allow-same-origin"
-                    title="Mapa de localização do MANU Studio Beauty em Camaçari"></iframe>
+                    title="Mapa de localização de MANU - Studio Beauty em Camaçari"></iframe>
             </div>
         </div>
     </section>
