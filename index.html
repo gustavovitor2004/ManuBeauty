@@ -215,6 +215,26 @@
             color: var(--white);
             text-decoration: none;
             letter-spacing: 2px;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .nav-logo {
+            max-height: 50px;
+            width: auto;
+            display: block;
+        }
+
+        .hero-logo-wrapper {
+            margin-bottom: 24px;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .hero-logo {
+            max-height: 80px;
+            width: auto;
+            display: block;
         }
 
         /* HERO SECTION (GRID 2 COLUNAS + FOTO/OVERLAY) */
@@ -453,59 +473,126 @@
             color: var(--text-muted);
         }
 
-        /* MASONRY GALLERY (DIRETRIZES DO LAYOUT B) */
+        /* RESULTS GALLERY (GOOGLE MAPS REVIEW CARD STYLE) */
         .gallery-section {
             background-color: var(--bg-nude);
         }
 
-        .masonry-grid {
+        .results-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-gap: 20px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
         }
 
-        .masonry-item {
+        .results-card {
             position: relative;
             overflow: hidden;
-            border-radius: var(--radius-md);
-            box-shadow: var(--shadow-sm);
-            height: 320px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-md);
+            aspect-ratio: 4/5;
+            background-color: var(--white);
+            transition: var(--transition);
         }
 
-        .masonry-item.tall {
-            height: 420px;
+        .results-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
         }
 
-        .masonry-item img {
+        .results-img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: var(--transition);
         }
 
-        .masonry-item:hover img {
+        .results-card:hover .results-img {
             transform: scale(1.05);
         }
 
-        .gallery-overlay {
+        /* Google Maps Review Card Mockup Overlay */
+        .google-review-badge {
             position: absolute;
-            inset: 0;
-            background: linear-gradient(transparent, rgba(26, 26, 26, 0.7));
-            opacity: 0;
+            bottom: 15px;
+            left: 15px;
+            right: 15px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 12px;
             display: flex;
-            align-items: flex-end;
-            padding: 20px;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.5);
             transition: var(--transition);
+            z-index: 2;
         }
 
-        .masonry-item:hover .gallery-overlay {
-            opacity: 1;
+        .results-card:hover .google-review-badge {
+            background: rgba(255, 255, 255, 1);
+            transform: scale(1.02);
         }
 
-        .gallery-overlay span {
+        .review-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: var(--primary);
             color: var(--white);
-            font-family: var(--font-title);
-            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.95rem;
+            flex-shrink: 0;
+        }
+
+        .review-body {
+            flex-grow: 1;
+            min-width: 0;
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2px;
+            gap: 5px;
+        }
+
+        .review-name {
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--dark);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .review-stars {
+            color: #fbbf24;
+            font-size: 0.75rem;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .review-text {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            line-height: 1.3;
+            margin: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .review-google-pin {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
         }
 
         /* COMO AGENDAR */
@@ -959,7 +1046,7 @@
                 gap: 32px;
             }
 
-            .masonry-grid {
+            .results-grid {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 20px;
             }
@@ -981,6 +1068,10 @@
                 text-align: center;
                 min-height: auto;
                 padding: 140px 0 80px 0;
+            }
+
+            .hero-logo-wrapper {
+                justify-content: center;
             }
 
             .hero-title {
@@ -1006,9 +1097,8 @@
                 height: 350px;
             }
 
-            .masonry-item,
-            .masonry-item.tall {
-                height: 280px;
+            .results-card {
+                /* aspect-ratio handles height automatically */
             }
 
             .cta-bar {
@@ -1041,7 +1131,7 @@
             .grid-3,
             .grid-4,
             .services-grid,
-            .masonry-grid,
+            .results-grid,
             .footer-grid {
                 grid-template-columns: 1fr;
                 gap: 24px;
@@ -1087,13 +1177,18 @@
 
     <header>
         <div class="container nav-container">
-            <a href="#" class="logo">MANU</a>
+            <a href="#" class="logo" aria-label="MANU Studio Beauty">
+                <img src="assets/logo.png" alt="MANU - Studio Beauty" class="nav-logo">
+            </a>
         </div>
     </header>
 
     <section class="hero-section">
         <div class="container grid-2">
             <div class="hero-content reveal">
+                <div class="hero-logo-wrapper">
+                    <img src="assets/logo.png" alt="MANU - Studio Beauty" class="hero-logo">
+                </div>
                 <div class="badge-google">
                     <span>★★★★★</span> 5.0★ — Nota Máxima no Google
                 </div>
@@ -1217,26 +1312,89 @@
             <h2 class="section-title">Resultados Reais</h2>
             <p class="section-subtitle">Olhares que expressam personalidade</p>
 
-            <div class="masonry-grid">
-                <div class="masonry-item reveal">
+            <div class="results-grid">
+                <!-- Card 1 -->
+                <div class="results-card reveal">
                     <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=500&q=80"
-                        alt="Design de sobrancelha impecável" loading="lazy">
-                    <div class="gallery-overlay"><span>Design Estratégico</span></div>
+                        alt="Design de sobrancelha impecável" class="results-img" loading="lazy">
+                    <div class="google-review-badge">
+                        <div class="review-avatar">A</div>
+                        <div class="review-body">
+                            <div class="review-header">
+                                <span class="review-name">Amanda Lima</span>
+                                <span class="review-stars">5.0 ★★★★★</span>
+                            </div>
+                            <p class="review-text">"Melhor design de sobrancelha!"</p>
+                        </div>
+                        <div class="review-google-pin">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ea4335" width="18" height="18">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                        </div>
+                    </div>
                 </div>
-                <div class="masonry-item tall reveal">
+
+                <!-- Card 2 -->
+                <div class="results-card reveal">
                     <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=500&q=80"
-                        alt="Alongamento de cílios volume russo premium" loading="lazy">
-                    <div class="gallery-overlay"><span>Volume Russo Premium</span></div>
+                        alt="Alongamento de cílios volume russo premium" class="results-img" loading="lazy">
+                    <div class="google-review-badge">
+                        <div class="review-avatar">C</div>
+                        <div class="review-body">
+                            <div class="review-header">
+                                <span class="review-name">Carolina Silva</span>
+                                <span class="review-stars">5.0 ★★★★★</span>
+                            </div>
+                            <p class="review-text">"Volume russo lindo e muito leve!"</p>
+                        </div>
+                        <div class="review-google-pin">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ea4335" width="18" height="18">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                        </div>
+                    </div>
                 </div>
-                <div class="masonry-item reveal">
+
+                <!-- Card 3 -->
+                <div class="results-card reveal">
                     <img src="https://images.unsplash.com/photo-1522337094328-06a5daf1af65?auto=format&fit=crop&w=500&q=80"
-                        alt="Extensão de cílios fio a fio" loading="lazy">
-                    <div class="gallery-overlay"><span>Fio a Fio Natural</span></div>
+                        alt="Extensão de cílios fio a fio" class="results-img" loading="lazy">
+                    <div class="google-review-badge">
+                        <div class="review-avatar">M</div>
+                        <div class="review-body">
+                            <div class="review-header">
+                                <span class="review-name">Mariana Souza</span>
+                                <span class="review-stars">5.0 ★★★★★</span>
+                            </div>
+                            <p class="review-text">"Fio a fio maravilhoso e natural!"</p>
+                        </div>
+                        <div class="review-google-pin">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ea4335" width="18" height="18">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                        </div>
+                    </div>
                 </div>
-                <div class="masonry-item tall reveal">
+
+                <!-- Card 4 -->
+                <div class="results-card reveal">
                     <img src="https://images.unsplash.com/photo-1515688594390-b649af70d282?auto=format&fit=crop&w=500&q=80"
-                        alt="Embelezamento de olhar profissional" loading="lazy">
-                    <div class="gallery-overlay"><span>Olhar Marcante</span></div>
+                        alt="Embelezamento de olhar profissional" class="results-img" loading="lazy">
+                    <div class="google-review-badge">
+                        <div class="review-avatar">T</div>
+                        <div class="review-body">
+                            <div class="review-header">
+                                <span class="review-name">Taís Santos</span>
+                                <span class="review-stars">5.0 ★★★★★</span>
+                            </div>
+                            <p class="review-text">"Amei o atendimento! Super recomendo!"</p>
+                        </div>
+                        <div class="review-google-pin">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ea4335" width="18" height="18">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
