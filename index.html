@@ -1,0 +1,1482 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MANU - Studio Beauty | Alongamento de Cílios em Camaçari - BA</title>
+    <meta name="description"
+        content="Especialista em alongamento de cílios e design de sobrancelhas em Camaçari. Atendimento com hora marcada em um ambiente calmo e acolhedor. Agende seu horário!">
+    <meta name="keywords"
+        content="alongamento de cílios Camaçari, design de sobrancelhas Camaçari, studio de cílios Camaçari BA, extensão de cílios Novo Horizonte Camaçari, MANU studio beauty Camaçari">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="MANU - Studio Beauty | Cílios e Sobrancelhas em Camaçari">
+    <meta property="og:description"
+        content="Realce sua beleza natural com quem é nota máxima 5.0★ no Google. Alongamento de cílios e design de sobrancelhas em Camaçari.">
+    <meta property="og:url" content="https://manustudiobeauty.com.br">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="MANU - Studio Beauty">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="MANU - Studio Beauty | Cílios e Sobrancelhas em Camaçari">
+    <meta property="twitter:description"
+        content="Realce sua beleza natural com quem é nota máxima 5.0★ no Google. Alongamento de cílios e design de sobrancelhas em Camaçari.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+
+    <style>
+        /* VARIÁVEIS DE CORES E CONFIGURAÇÕES PADRÃO */
+        :root {
+            --primary: #c9987a;
+            /* Rose gold suave */
+            --bg-nude: #f5ede6;
+            /* Nude bege */
+            --dark: #1a1a1a;
+            /* Preto suave */
+            --rose-powder: #e8c4b8;
+            /* Rosa pó */
+            --white: #ffffff;
+            --text-muted: #555555;
+
+            --font-title: 'Cormorant Garamond', serif;
+            --font-body: 'Jost', sans-serif;
+
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            --shadow-sm: 0 4px 12px rgba(26, 26, 26, 0.05);
+            --shadow-md: 0 10px 30px rgba(26, 26, 26, 0.08);
+            --shadow-lg: 0 20px 50px rgba(201, 152, 122, 0.15);
+
+            --radius-md: 12px;
+            --radius-lg: 24px;
+        }
+
+        /* RESET DA PÁGINA */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--white);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ESTRUTURAS DE SPACING VARIADOS (DIRETRIZES DO LAYOUT B) */
+        .section-large {
+            padding: 120px 0;
+        }
+
+        .section-compact {
+            padding: 50px 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ALINHAMENTOS DE GRID VARIADOS */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 48px;
+            align-items: center;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        /* ESTILOS DE TÍTULOS */
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: var(--font-title);
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .section-title {
+            font-size: clamp(2.2rem, 5vw, 3rem);
+            line-height: 1.3;
+            text-align: center;
+            margin-bottom: 16px;
+            position: relative;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            text-align: center;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 60px auto;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* BOTÕES */
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 18px 40px;
+            border-radius: 50px;
+            background: var(--primary);
+            color: var(--white);
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(201, 152, 122, 0.4);
+            animation: pulse-btn 3s infinite;
+            transition: var(--transition);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(201, 152, 122, 0.6);
+            filter: brightness(1.05);
+        }
+
+        @keyframes pulse-btn {
+
+            0%,
+            100% {
+                box-shadow: 0 4px 15px rgba(201, 152, 122, 0.4);
+            }
+
+            50% {
+                box-shadow: 0 6px 30px rgba(201, 152, 122, 0.7);
+            }
+        }
+
+        /* SCROLL REVEAL ANIMATION */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* HEADER / NAVIGATION */
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+            padding: 30px 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-title);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+
+        /* HERO SECTION (GRID 2 COLUNAS + FOTO/OVERLAY) */
+        .hero-section {
+            position: relative;
+            min-height: 90vh;
+            background: linear-gradient(rgba(26, 26, 26, 0.75), rgba(26, 26, 26, 0.75)), url('https://images.unsplash.com/photo-1583001931096-959e9a1a6223?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            padding-top: 100px;
+            color: var(--white);
+        }
+
+        .hero-content {
+            z-index: 2;
+        }
+
+        .badge-google {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: var(--white);
+        }
+
+        .badge-google span {
+            color: #fbbf24;
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 6.5vw, 4.5rem);
+            line-height: 1.25;
+            color: var(--white);
+            margin-bottom: 24px;
+        }
+
+        .hero-text {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-bottom: 40px;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 540px;
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-img-frame {
+            width: 100%;
+            max-width: 420px;
+            height: 520px;
+            border-radius: 200px 200px 0 0;
+            border: 2px solid var(--primary);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .hero-img-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* STATS BAR */
+        .stats-bar {
+            background: var(--dark);
+            padding: 40px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        .stat-num {
+            font-family: var(--font-title);
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: rgba(255, 255, 255, 0.6);
+            margin-top: 8px;
+        }
+
+        /* HISTÓRIA / QUEM SOMOS */
+        .history-section {
+            background-color: var(--white);
+        }
+
+        .history-img-box {
+            position: relative;
+        }
+
+        .history-img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+        }
+
+        .history-decor {
+            position: absolute;
+            bottom: -20px;
+            left: -20px;
+            width: 100%;
+            height: 100%;
+            border: 2px solid var(--primary);
+            border-radius: var(--radius-md);
+            z-index: -1;
+        }
+
+        .history-content h2 {
+            font-size: clamp(2.2rem, 5vw, 3rem);
+            line-height: 1.3;
+            margin-bottom: 24px;
+        }
+
+        .history-content p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        /* SERVIÇOS */
+        .services-section {
+            background-color: var(--bg-nude);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 50px;
+            box-shadow: var(--shadow-sm);
+            border-top: 4px solid var(--primary);
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 24px;
+            display: inline-block;
+        }
+
+        .service-card h3 {
+            font-size: 2.2rem;
+            margin-bottom: 24px;
+        }
+
+        .service-list {
+            list-style: none;
+        }
+
+        .service-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 14px 0;
+            border-bottom: 1px solid rgba(26, 26, 26, 0.05);
+            font-size: 1.05rem;
+        }
+
+        .service-list li:last-child {
+            border-bottom: none;
+        }
+
+        .service-list li span:first-child {
+            font-weight: 500;
+        }
+
+        .service-list li span:last-child {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* POR QUE A MANU? */
+        .features-section {
+            background-color: var(--white);
+        }
+
+        .feature-card {
+            background: var(--bg-nude);
+            padding: 40px 30px;
+            border-radius: var(--radius-md);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            background: var(--rose-powder);
+            transform: translateY(-3px);
+        }
+
+        .feature-emoji {
+            font-size: 2.2rem;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+        }
+
+        .feature-card p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        /* MASONRY GALLERY (DIRETRIZES DO LAYOUT B) */
+        .gallery-section {
+            background-color: var(--bg-nude);
+        }
+
+        .masonry-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 20px;
+        }
+
+        .masonry-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            height: 320px;
+        }
+
+        .masonry-item.tall {
+            height: 420px;
+        }
+
+        .masonry-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .masonry-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(transparent, rgba(26, 26, 26, 0.7));
+            opacity: 0;
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+            transition: var(--transition);
+        }
+
+        .masonry-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay span {
+            color: var(--white);
+            font-family: var(--font-title);
+            font-size: 1.4rem;
+        }
+
+        /* COMO AGENDAR */
+        .steps-section {
+            background-color: var(--white);
+        }
+
+        .step-card {
+            text-align: center;
+            position: relative;
+            padding: 0 20px;
+        }
+
+        .step-num-box {
+            width: 70px;
+            height: 70px;
+            background: var(--primary);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-title);
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 0 auto 24px auto;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .step-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 12px;
+        }
+
+        .step-card p {
+            color: var(--text-muted);
+        }
+
+        /* DEPOIMENTOS EM CARDS COM CITAÇÃO EM DESTAQUE */
+        .testimonials-section {
+            background-color: var(--bg-nude);
+        }
+
+        .testimonial-featured {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 60px;
+            box-shadow: var(--shadow-md);
+            margin-bottom: 40px;
+            border-left: 6px solid var(--primary);
+        }
+
+        .test-quote-big {
+            font-family: var(--font-title);
+            font-size: 2.2rem;
+            font-style: italic;
+            line-height: 1.4;
+            color: var(--dark);
+            margin-bottom: 30px;
+        }
+
+        .test-profile {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .test-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--rose-powder);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--dark);
+        }
+
+        .test-info h4 {
+            font-size: 1.2rem;
+            font-family: var(--font-body);
+            font-weight: 600;
+        }
+
+        .test-stars {
+            color: #fbbf24;
+            font-size: 0.9rem;
+            margin-top: 4px;
+        }
+
+        .test-card {
+            background: var(--white);
+            border-radius: var(--radius-md);
+            padding: 32px;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .test-quote-small {
+            font-size: 1rem;
+            font-style: italic;
+            color: var(--dark);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        /* FAQ COM ACORDEÃO */
+        .faq-section {
+            background-color: var(--white);
+        }
+
+        .faq-max-width {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(26, 26, 26, 0.1);
+            padding: 24px 0;
+        }
+
+        .faq-trigger {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            background: none;
+            border: none;
+            text-align: left;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .faq-trigger h3 {
+            font-size: 1.4rem;
+            font-family: var(--font-body);
+            font-weight: 500;
+            color: var(--dark);
+            transition: var(--transition);
+        }
+
+        .faq-icon {
+            font-size: 1.2rem;
+            color: var(--primary);
+            transition: var(--transition);
+        }
+
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .faq-content p {
+            padding-top: 16px;
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        .faq-item.active .faq-trigger h3 {
+            color: var(--primary);
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        /* LOCALIZAÇÃO */
+        .map-section {
+            background-color: var(--bg-nude);
+        }
+
+        .map-box {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            height: 450px;
+        }
+
+        /* BOTTOM EMBED PRE-CTA BADGE */
+        .pre-cta-box {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .badge-cta {
+            display: inline-block;
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 80px 0 30px 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        .footer-brand h2 {
+            color: var(--white);
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.6);
+            max-width: 360px;
+            margin-bottom: 24px;
+        }
+
+        .footer-links h3 {
+            color: var(--primary);
+            font-family: var(--font-body);
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 24px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links ul li a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links ul li a:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* COMPONENTES FIXOS: WHATSAPP FLOAT + CTA BAR BAR FIXA */
+        .wa-float {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: #25d366;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45);
+            z-index: 1000;
+            text-decoration: none;
+            animation: wa-pulse 2.5s infinite;
+            transition: var(--transition);
+        }
+
+        .wa-float:hover {
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        @keyframes wa-pulse {
+
+            0%,
+            100% {
+                box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            }
+
+            50% {
+                box-shadow: 0 6px 30px rgba(37, 211, 102, 0.7);
+            }
+        }
+
+        .cta-bar {
+            position: fixed;
+            bottom: -100px;
+            left: 0;
+            right: 0;
+            background: var(--dark);
+            border-top: 2px solid var(--primary);
+            padding: 16px 24px;
+            z-index: 998;
+            transition: bottom 0.4s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .cta-bar.show {
+            bottom: 0;
+        }
+
+        .cta-bar p {
+            color: var(--white);
+            font-family: var(--font-title);
+            font-size: 1.4rem;
+        }
+
+        .cta-heading {
+            font-size: clamp(2.2rem, 5.5vw, 3.5rem);
+            font-family: var(--font-title);
+            line-height: 1.25;
+            margin-bottom: 20px;
+        }
+
+        .btn-top-left {
+            position: fixed;
+            bottom: 28px;
+            left: 28px;
+            width: 45px;
+            height: 45px;
+            background-color: var(--white);
+            border: 1px solid rgba(26, 26, 26, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 999;
+            box-shadow: var(--shadow-sm);
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .btn-top-left.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* TABLETS (max-width: 1024px) */
+        @media(max-width: 1024px) {
+            .grid-3 {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+
+            .grid-4 {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 32px;
+            }
+
+            .masonry-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+            }
+        }
+
+        /* RESPONSIVIDADE GERAL MOBILE/TABLET (max-width: 992px) */
+        @media(max-width: 992px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .hero-section {
+                text-align: center;
+                min-height: auto;
+                padding: 140px 0 80px 0;
+            }
+
+            .hero-title {
+                font-size: clamp(2.2rem, 8vw, 3rem);
+                line-height: 1.3;
+            }
+
+            .hero-text {
+                margin: 0 auto 32px auto;
+            }
+
+            .hero-img-frame {
+                height: 380px;
+                margin-top: 40px;
+            }
+
+            .section-title {
+                font-size: clamp(1.8rem, 6vw, 2.4rem);
+                line-height: 1.3;
+            }
+
+            .history-img {
+                height: 350px;
+            }
+
+            .masonry-item,
+            .masonry-item.tall {
+                height: 280px;
+            }
+
+            .cta-bar {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+                padding: 20px;
+            }
+
+            .cta-bar p {
+                font-size: 1.1rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            /* Eleva o botão do WhatsApp e voltar ao topo quando a CTA bar estiver ativa no mobile/tablet */
+            .cta-bar.show ~ .wa-float {
+                bottom: 140px;
+            }
+            .cta-bar.show ~ .btn-top-left {
+                bottom: 140px;
+            }
+        }
+
+        /* SMARTPHONES PEQUENOS E MÉDIOS (max-width: 768px) */
+        @media(max-width: 768px) {
+            .grid-3,
+            .grid-4,
+            .services-grid,
+            .masonry-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .container {
+                padding: 0 20px;
+            }
+
+            .hero-section {
+                padding: 120px 16px 60px 16px;
+            }
+
+            .hero-title {
+                font-size: clamp(2rem, 9vw, 2.5rem);
+                line-height: 1.35;
+            }
+
+            .hero-img-frame {
+                height: 320px;
+                max-width: 320px;
+            }
+
+            .history-img {
+                height: 280px;
+            }
+
+            /* Espaço seguro padrão para o WhatsApp no celular */
+            .wa-float {
+                bottom: 24px;
+                right: 20px;
+            }
+
+            .btn-top-left {
+                bottom: 24px;
+                left: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">MANU</a>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="container grid-2">
+            <div class="hero-content reveal">
+                <div class="badge-google">
+                    <span>★★★★★</span> 5.0★ — Nota Máxima no Google
+                </div>
+                <h1 class="hero-title">Realce a sua beleza natural.</h1>
+                <p class="hero-text">Cada detalhe é pensado exclusivamente para você relaxar, desconectar e sair
+                    completamente transformada.</p>
+                <a href="https://api.whatsapp.com/send?phone=5571993412552&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20no%20MANU%20Studio%20Beauty!"
+                    target="_blank" rel="noopener noreferrer" class="btn-primary">
+                    Agende Seu Momento Premium ✨
+                </a>
+            </div>
+            <div class="hero-image-wrapper reveal">
+                <div class="hero-img-frame">
+                    <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=800&q=80"
+                        alt="Cílios e sobrancelhas impecáveis no MANU Studio Beauty" width="420" height="520">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-bar">
+        <div class="container stats-grid">
+            <div>
+                <div class="stat-num">5.0★</div>
+                <div class="stat-label">Avaliação Máxima Google</div>
+            </div>
+            <div>
+                <div class="stat-num">16+</div>
+                <div class="stat-label">Avaliações Reais de Clientes</div>
+            </div>
+            <div>
+                <div class="stat-num">100%</div>
+                <div class="stat-label">Fidelidade & Cuidado</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="history-section section-large">
+        <div class="container grid-2">
+            <div class="history-img-box reveal">
+                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80"
+                    alt="Ambiente calmo e aconchegante da Manu" class="history-img" loading="lazy">
+                <div class="history-decor"></div>
+            </div>
+            <div class="history-content reveal">
+                <h2>O Cuidado que Você Merece</h2>
+                <p>No MANU - Studio Beauty, acreditamos que o embelezamento do olhar vai muito além do procedimento
+                    estético. É um ritual de cuidado, autoestima e relaxamento profundo.</p>
+                <p>Nossos atendimentos são feitos com hora marcada, garantindo que você desfrute de um ambiente
+                    inteiramente calmo, aconchegante e sem pressa. Aqui, você fica tão confortável e relaxada que chega
+                    a dormir enquanto cuidamos de você.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-section section-large">
+        <div class="container">
+            <h2 class="section-title">Nossos Serviços Especializados</h2>
+            <p class="section-subtitle">Procedimentos Premium sob Medida</p>
+
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <span class="service-icon">✨</span>
+                    <h3>Alongamento de Cílios</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 24px;">Nossa especialidade principal. Fios leves
+                        e acoplagem impecável para um olhar marcante e natural.</p>
+                    <ul class="service-list">
+                        <li><span>Fio a Fio Tradicional</span> <span>Elegância</span></li>
+                        <li><span>Volume Russo</span> <span>Preenchimento</span></li>
+                        <li><span>Extensão Híbrida</span> <span>Equilíbrio</span></li>
+                    </ul>
+                </div>
+
+                <div class="service-card reveal">
+                    <span class="service-icon">📐</span>
+                    <h3>Sobrancelhas</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 24px;">Design estratégico que harmoniza e
+                        valoriza os traços únicos do seu rosto com simetria perfeita.</p>
+                    <ul class="service-list">
+                        <li><span>Design Personalizado</span> <span>Definição</span></li>
+                        <li><span>Embelezamento de Sobrancelhas</span> <span>Realce</span></li>
+                        <li><span>Alinhamento e Simetria</span> <span>Harmonia</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-section section-large">
+        <div class="container">
+            <h2 class="section-title">Por que Escolher o Nosso Studio?</h2>
+            <p class="section-subtitle">A experiência perfeita em cada detalhe</p>
+
+            <div class="grid-4">
+                <div class="feature-card reveal">
+                    <span class="feature-emoji">🪶</span>
+                    <h3>Mãos Cuidadosas</h3>
+                    <p>Atendimento profissional delicado que prioriza o seu conforto e a saúde dos seus fios.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <span class="feature-emoji">🕯️</span>
+                    <h3>Ambiente Aconchegante</h3>
+                    <p>Um espaço calmo, limpo e super tranquilo criado para você se desligar da rotina.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <span class="feature-emoji">💖</span>
+                    <h3>Clientes Fiéis</h3>
+                    <p>Quem experimenta não troca. Uma comunidade de mulheres apaixonadas pelos resultados.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <span class="feature-emoji">⭐</span>
+                    <h3>Nota Máxima 5.0</h3>
+                    <p>Reconhecimento total no Google com 100% de satisfação unânime de quem nos visita.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-section section-large">
+        <div class="container">
+            <h2 class="section-title">Resultados Reais</h2>
+            <p class="section-subtitle">Olhares que expressam personalidade</p>
+
+            <div class="masonry-grid">
+                <div class="masonry-item reveal">
+                    <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=500&q=80"
+                        alt="Design de sobrancelha impecável" loading="lazy">
+                    <div class="gallery-overlay"><span>Design Estratégico</span></div>
+                </div>
+                <div class="masonry-item tall reveal">
+                    <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=500&q=80"
+                        alt="Alongamento de cílios volume russo premium" loading="lazy">
+                    <div class="gallery-overlay"><span>Volume Russo Premium</span></div>
+                </div>
+                <div class="masonry-item reveal">
+                    <img src="https://images.unsplash.com/photo-1522337094328-06a5daf1af65?auto=format&fit=crop&w=500&q=80"
+                        alt="Extensão de cílios fio a fio" loading="lazy">
+                    <div class="gallery-overlay"><span>Fio a Fio Natural</span></div>
+                </div>
+                <div class="masonry-item tall reveal">
+                    <img src="https://images.unsplash.com/photo-1515688594390-b649af70d282?auto=format&fit=crop&w=500&q=80"
+                        alt="Embelezamento de olhar profissional" loading="lazy">
+                    <div class="gallery-overlay"><span>Olhar Marcante</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="steps-section section-large">
+        <div class="container">
+            <h2 class="section-title">Como Agendar o seu Horário</h2>
+            <p class="section-subtitle">Passo a passo simples para o seu dia de beleza</p>
+
+            <div class="grid-3">
+                <div class="step-card reveal">
+                    <div class="step-num-box">1</div>
+                    <h3>Chame no WhatsApp</h3>
+                    <p>Clique em nossos botões de agendamento para abrir o link direto do nosso contato.</p>
+                </div>
+                <div class="step-card reveal">
+                    <div class="step-num-box">2</div>
+                    <h3>Escolha o Horário</h3>
+                    <p>Encontre a melhor hora disponível na agenda para realizar o seu atendimento personalizado.</p>
+                </div>
+                <div class="step-card reveal">
+                    <div class="step-num-box">3</div>
+                    <h3>Relaxar e Desfrutar</h3>
+                    <p>Compareça ao nosso estúdio aconchegante e deixe que cuidamos de toda a sua transformação.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials-section section-large">
+        <div class="container">
+            <h2 class="section-title">O que Dizem Nossas Clientes</h2>
+            <p class="section-subtitle">Opiniões de quem viveu a experiência MANU</p>
+
+            <div class="testimonial-featured reveal">
+                <div class="test-quote-big">
+                    "Por indicação de uma amiga, fui a primeira vez no Studio da Manu e estou apaixonada! Fiz
+                    alongamento de cílios e design de sobrancelhas que ficaram maravilhosamente lindos. Profissional
+                    educada e atenciosa, voltarei com certeza! 🩷✨"
+                </div>
+                <div class="test-profile">
+                    <div class="test-avatar">M</div>
+                    <div class="test-info">
+                        <h4>Cliente Satisfeita</h4>
+                        <div class="test-stars">★★★★★</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-3">
+                <div class="test-card reveal">
+                    <p class="test-quote-small">"Fiz meu alongamento de cílios nesse studio e simplesmente amei! O
+                        atendimento é impecável, super atenciosa, cuidadosa e deixam a gente muito confortável durante
+                        todo o procedimento."</p>
+                    <div class="test-profile">
+                        <div class="test-avatar">C</div>
+                        <div class="test-info">
+                            <h4>Avaliação Google</h4>
+                            <div class="test-stars">★★★★★</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="test-card reveal">
+                    <p class="test-quote-small">"Perfeita! Ótimo atendimento, ambiente calmo e tranquilo, além de muito
+                        aconchegante."</p>
+                    <div class="test-profile">
+                        <div class="test-avatar">A</div>
+                        <div class="test-info">
+                            <h4>Avaliação Google</h4>
+                            <div class="test-stars">★★★★★</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="test-card reveal">
+                    <p class="test-quote-small">"Adoro fazer os cílios com ela, maravilhosa!! Atendimento ótimo, chego
+                        durmo :3"</p>
+                    <div class="test-profile">
+                        <div class="test-avatar">L</div>
+                        <div class="test-info">
+                            <h4>Laila Pascoal</h4>
+                            <div class="test-stars">★★★★★</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section section-large">
+        <div class="container faq-max-width">
+            <h2 class="section-title">Perguntas Frequentes</h2>
+            <p class="section-subtitle">Esclareça suas dúvidas frequentes</p>
+
+            <div class="faq-item reveal">
+                <button class="faq-trigger" aria-expanded="false">
+                    <h3>Como funciona o atendimento?</h3>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-content">
+                    <p>Todos os nossos atendimentos ocorrem exclusivamente sob hora marcada. Isso nos possibilita
+                        oferecer dedicação completa, um espaço silencioso, acolhedor e totalmente sem interrupções
+                        durante o seu design ou extensão.</p>
+                </div>
+            </div>
+
+            <div class="faq-item reveal">
+                <button class="faq-trigger" aria-expanded="false">
+                    <h3>Quanto tempo demora o procedimento de cílios?</h3>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-content">
+                    <p>A aplicação leva em torno de 1h30 a 2 horas, a depender da técnica escolhida. O processo é
+                        extremamente minucioso e delicado, permitindo que você relaxe confortavelmente e durma durante o
+                        procedimento.</p>
+                </div>
+            </div>
+
+            <div class="faq-item reveal">
+                <button class="faq-trigger" aria-expanded="false">
+                    <h3>Onde o studio fica localizado? Tem estacionamento?</h3>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-content">
+                    <p>Estamos localizados na Rua Bauru - Novo Horizonte, Camaçari - BA. O local possui fácil acesso e
+                        conta com estacionamento gratuito em frente para total comodidade das nossas clientes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section section-large">
+        <div class="container">
+            <h2 class="section-title">Nossa Localização</h2>
+            <p class="section-subtitle">Rua Bauru - Novo Horizonte, Camaçari - BA</p>
+            <div class="map-box reveal">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.3123719003513!2d-38.3312!3d-12.7011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zTUFOSSBTdHVkaW8gQmVhdXR5LCBSdWEgQmF1cnUsIE5vdm8gSG9yaXpvbnRlLCBDYW1hY2FyaSBCQQ!5e0!3m2!1spt-BR!2sbr!4v1654983210111!5m2!1spt-BR!2sbr"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" sandbox="allow-scripts allow-same-origin"
+                    title="Mapa de localização do MANU Studio Beauty em Camaçari"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-large" style="background-color: var(--white); text-align: center;">
+        <div class="container reveal">
+            <div class="pre-cta-box">
+                <span class="badge-cta">Atendimento com hora marcada — Reserve o seu!</span>
+            </div>
+            <h2 class="cta-heading">Pronta para se apaixonar pelo seu olhar?</h2>
+            <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 40px auto; font-size: 1.1rem;">Venha
+                viver uma experiência de beleza verdadeiramente relaxante e sob medida em Camaçari. Vagas limitadas por
+                semana!</p>
+            <a href="https://api.whatsapp.com/send?phone=5571993412552&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20no%20MANU%20Studio%20Beauty!"
+                target="_blank" rel="noopener noreferrer" class="btn-primary">
+                Agendar Agora no WhatsApp 💕
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h2>MANU</h2>
+                <p>Studio de beleza especializado em alongamento de cílios e design de sobrancelhas premium em Camaçari
+                    - BA.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Horários</h3>
+                <p style="color: rgba(255, 255, 255, 0.7); margin-bottom: 8px;">Atendimento Exclusivo</p>
+                <p style="color: var(--primary); font-weight: 600;">Fecha às 17h00</p>
+                <p style="font-size: 0.85rem; color: rgba(255, 255, 255, 0.4); margin-top: 4px;">Apenas com hora marcada
+                </p>
+            </div>
+            <div class="footer-links">
+                <h3>Contato</h3>
+                <p style="color: rgba(255, 255, 255, 0.7); margin-bottom: 8px;">Telefone / WhatsApp:</p>
+                <p style="color: rgba(255, 255, 255, 0.9);">(71) 99341-2552</p>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <div>&copy; 2026 MANU - Studio Beauty. Todos os direitos reservados.</div>
+            <div>Feito com amor por Criação de Sites</div>
+        </div>
+    </footer>
+
+    <button class="btn-top-left" id="btnTop" aria-label="Voltar ao topo da página">↑</button>
+
+    <div class="cta-bar" id="ctaBar">
+        <p>Realce seu olhar com a nota máxima 5.0★</p>
+        <a href="https://api.whatsapp.com/send?phone=5571993412552&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20no%20MANU%20Studio%20Beauty!"
+            target="_blank" rel="noopener noreferrer" class="btn-primary"
+            style="padding: 10px 24px; font-size: 0.9rem; animation: none;">
+            Reservar Horário 🗓️
+        </a>
+    </div>
+
+    <a href="https://api.whatsapp.com/send?phone=5571993412552&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20no%20MANU%20Studio%20Beauty!"
+        target="_blank" rel="noopener noreferrer" class="wa-float" aria-label="Fale conosco no WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+            <path
+                d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.458L0 24zm6.59-4.846c1.62.963 3.4 1.47 5.358 1.471h.007c5.579 0 10.123-4.542 10.127-10.125.002-2.704-1.05-5.247-2.96-7.16-1.911-1.913-4.454-2.965-7.16-2.967-5.584 0-10.13 4.542-10.134 10.127-.002 1.957.51 3.868 1.487 5.486L1.879 21.05l5.241-1.374c1.554.848 3.286 1.294 5.053 1.295h.008zm11.125-7.805c-.3-.15-1.771-.875-2.043-.974-.271-.1-.47-.15-.668.15-.197.3-.765.974-.938 1.173-.173.197-.346.223-.646.074-.3-.15-1.265-.467-2.41-1.487-.89-.794-1.49-1.775-1.665-2.074-.175-.3-.019-.462.13-.611.135-.133.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.668-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.771-.724 2.02-1.424.248-.699.248-1.3.173-1.424-.075-.124-.272-.198-.57-.347z" />
+        </svg>
+    </a>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BeautySalon",
+      "name": "MANU - Studio Beauty",
+      "description": "Studio de beleza especializado em alongamento de cílios e design de sobrancelhas em Camaçari - BA.",
+      "url": "https://manustudiobeauty.com.br",
+      "telephone": "+55-71-99341-2552",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Bauru - Novo Horizonte",
+        "addressLocality": "Camaçari",
+        "addressRegion": "BA",
+        "postalCode": "42802-005",
+        "addressCountry": "BR"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "08:00",
+        "closes": "17:00"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "16"
+      }
+    }
+    </script>
+
+    <script>
+        // SCROLL REVEAL (INTERSECTION OBSERVER)
+        const itemsToReveal = document.querySelectorAll('.reveal');
+        const scrollObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    scrollObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.08,
+            rootMargin: '0px 0px -40px 0px'
+        });
+
+        itemsToReveal.forEach(el => scrollObserver.observe(el));
+
+        // CONTROLE DA CTA BAR FIXA E DO BOTÃO VOLTAR AO TOPO
+        const ctaBar = document.getElementById('ctaBar');
+        const btnTop = document.getElementById('btnTop');
+
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+
+            // Exibir/ocultar CTA bar após 600px de rolagem
+            if (currentScrollY > 600) {
+                ctaBar.classList.add('show');
+                btnTop.classList.add('show');
+            } else {
+                ctaBar.classList.remove('show');
+                btnTop.classList.remove('show');
+            }
+        });
+
+        // Evento de clique para voltar ao topo da página (à esquerda)
+        btnTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // ACORDEÃO DO FAQ (PREVENÇÃO DE INLINE EVENT LISTENERS)
+        const faqTriggers = document.querySelectorAll('.faq-trigger');
+
+        faqTriggers.forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                const parent = trigger.parentElement;
+                const content = trigger.nextElementSibling;
+                const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+
+                // Fecha outros itens abertos para manter a elegância e foco
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    if (item !== parent) {
+                        item.classList.remove('active');
+                        item.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
+                        item.querySelector('.faq-content').style.maxHeight = null;
+                    }
+                });
+
+                // Alterna o estado do item clicado
+                if (isExpanded) {
+                    trigger.setAttribute('aria-expanded', 'false');
+                    parent.classList.remove('active');
+                    content.style.maxHeight = null;
+                } else {
+                    trigger.setAttribute('aria-expanded', 'true');
+                    parent.classList.add('active');
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
